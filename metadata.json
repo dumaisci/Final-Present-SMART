@@ -1,0 +1,10 @@
+{
+  "name": "SMART SCI FINAL PRESENT",
+  "description": "Sistem Monitoring Aset Operasional PT SUCOFINDO (Persero) SCI",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

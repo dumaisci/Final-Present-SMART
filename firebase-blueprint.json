@@ -1,0 +1,88 @@
+{
+  "entities": {
+    "asets": {
+      "title": "Asets",
+      "description": "Master data aset dan peralatan operasional",
+      "type": "object",
+      "properties": {
+        "id_aset": { "type": "string" },
+        "nama": { "type": "string" },
+        "kategori": { "type": "string" },
+        "nomor_seri": { "type": "string" },
+        "merk_model": { "type": "string" },
+        "tgl_perolehan": { "type": "string" },
+        "nilai_perolehan": { "type": "number" },
+        "kondisi": { "type": "string" },
+        "status": { "type": "string" },
+        "id_bidang_sekarang": { "type": "string" },
+        "nama_bidang_sekarang": { "type": "string" },
+        "id_pic_sekarang": { "type": "string" },
+        "nama_pic_sekarang": { "type": "string" },
+        "nama_pemegang_terakhir": { "type": "string" },
+        "lokasi_sekarang": { "type": "string" },
+        "qr_code": { "type": "string" },
+        "sertifikat_kalibrasi": { "type": "boolean" },
+        "nomor_sertifikat_kalibrasi": { "type": "string" },
+        "tgl_kalibrasi_terakhir": { "type": "string" },
+        "tgl_kalibrasi_berikutnya": { "type": "string" },
+        "lembaga_kalibrasi": { "type": "string" },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" }
+      },
+      "required": ["id_aset", "nama", "kategori"]
+    },
+    "pengajuan": {
+      "title": "Pengajuan",
+      "description": "Pengajuan mutasi, disposal, pemakaian, dan pemutakhiran",
+      "type": "object",
+      "properties": {
+        "id_pengajuan": { "type": "string" },
+        "id_aset": { "type": "string" },
+        "nama_aset": { "type": "string" },
+        "jenis": { "type": "string" },
+        "id_bidang_asal": { "type": "string" },
+        "nama_bidang_asal": { "type": "string" },
+        "status_approval": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id_pengajuan", "id_aset", "jenis"]
+    },
+    "bidangs": {
+      "title": "Bidangs",
+      "description": "Master data bidang dan unit pelayanan",
+      "type": "object",
+      "properties": {
+        "id_bidang": { "type": "string" },
+        "nama_bidang": { "type": "string" },
+        "jenis": { "type": "string" },
+        "pic_utama": { "type": "string" }
+      },
+      "required": ["id_bidang", "nama_bidang"]
+    },
+    "users": {
+      "title": "Users",
+      "description": "Pengguna sistem dan role",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "username": { "type": "string" },
+        "nama": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "required": ["id", "username", "role"]
+    },
+    "auditLogs": {
+      "title": "Audit Logs",
+      "description": "Log aktivitas real-time",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "actorName": { "type": "string" },
+        "action": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "required": ["id", "timestamp"]
+    }
+  }
+}
